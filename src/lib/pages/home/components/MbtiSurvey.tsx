@@ -29,7 +29,7 @@ const MbtiSurvey = () => {
   }, []);
 
   const handleChangeAnswer = (event, questionId: string) => {
-    const answer = { questionId, response: event.target.value };
+    const answer = { questionId, response: parseInt(event.target.value, 10) };
 
     setAnswers((answers) => [...answers, answer]);
   };
